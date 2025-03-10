@@ -1,6 +1,12 @@
 import picture from "@assets/allpokemon.png";
+import { useEffect } from "react";
 
-const Project = () => {
+const Project = ({ data }: any) => {
+
+  useEffect(() => {
+    console.log("data", data);
+  }, [data]);
+
   const lists = [
     "HealthFlow",
     "Super app",
