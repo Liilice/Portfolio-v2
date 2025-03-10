@@ -1,0 +1,8 @@
+{
+  "title" : "Compétence",
+  "Frond-end": ["React", "Angular", "Symfony", "Tailwind CSS", "Next.js"],
+  "Back-end": ["Laravel", "ExpressJS", "Symfony", "Nest.js", "GraphQL", "NodeJs"],
+  "BDD": ["Mysql", "MongoDB", "PostgreSQL", "Supabase"],
+  "Mobile": ["React Native", "Kotlin", "SwiftUI"],
+  "Outils" : ["Docker", "Github"]
+}

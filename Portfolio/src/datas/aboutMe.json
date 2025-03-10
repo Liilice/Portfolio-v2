@@ -1,0 +1,27 @@
+{
+  "title": "A propos de moi",
+  "description": [
+    "Bonjour !",
+    "Développeuse Web, passionnée par la création et l'évolution de sites Web.",
+    "Au cours de ma formation en tant que développeuse Web, j'ai appris à concevoir des sites web et à les personnaliser pour les rendre fonctionnels.",
+    "Affamée  par l'idée d'explorer différents langages et technologies et technologies, je suis ouverte à l'apprentissage de nouvelles compétences pour progresser constamment dans ce domaine.",
+    "Si vous recherchez une développeuse Web passionnée, archarnée, dévouée et engagée pour vos projets, contactez-moi !"
+  ],
+  "name": "Alice Zheng",
+  "accroche": "Donner une vie digitale à une idée / une envie à un clic",
+  "etat_recherche": "CDI Développeuse full stack",
+  "Softskills": [
+    "Persévérance",
+    "Autonomie",
+    "Réactivité",
+    "Bonne gestion du temps",
+    "Esprit d’équipe",
+    "La flexibilité et l’adaptation"
+  ],
+  "coordonnées": {
+    "phone": "+33 6 52 42 21 42",
+    "Email": "alice.zheng@epitech.eu",
+    "Postal": "93120 La Courneuve"
+  },
+  "langues": ["Mandarin", "Anglais"]
+}

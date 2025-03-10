@@ -1,0 +1,39 @@
+{
+  "title" : "Éxpériences",
+  "expériencesProfessionnelles": [
+    {
+      "année": "2020 - 2024",
+      "poste": "Buraliste ",
+        "etablissement": "Le Week-end" ,
+      "description": [
+        "Conseil, vente et relation clients",
+        "Administration du stock",
+        "Travail en équipe",
+        "Tenue de caisse"
+      ],
+      "competenceAcquises": [
+        "collaboration",
+        "patience",
+        "entraide",
+        "travail en équipe",
+        "organisation"
+      ]
+    },
+    {
+      "année": "septembre 2024 - Novembre 2025",
+      "poste": "Alternante développeuse full stack",
+      "etablissement": "Fablife" ,
+      "description": [
+        "Amélioration continue du produit BeMum (programme d'accompagnement nutritionnel) sur les stacks suivantes : - NestJS pour la partie back. - Angular et ReactJS pour la partie front",
+        "Maintien du produit BeDaddy (programme d'accompagnement nutritionnel) sur les stacks suivantes : - NodeJS pour la partie back - Angular et Wordpress pour la partie front"
+      ],
+      "competenceAcquises": [
+        "collaboration",
+        "patience",
+        "entraide",
+        "travail en équipe",
+        "organisation"
+      ]
+    }
+  ]
+}

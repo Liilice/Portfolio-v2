@@ -10,7 +10,8 @@ export default defineConfig({
       "@assets": "/src/assets",
       "@components": "/src/components",
       "@fonts": "/src/fonts",
-      "@interfaces" : "/src/interfaces"
+      "@interfaces": "/src/interfaces",
+      "@datas": "/src/datas",
     },
   },
 });

@@ -11,7 +11,7 @@ const Pokeball = () => {
   }
 
   return (
-    <>
+    <div className="flex justify-center items-center py-4">
       <div className="w-96 h-96 border-4 border-solid border-black rounded-full flex justify-center items-center overflow-hidden shadow-xl">
         <div className="grid grid-rows-2 grid-cols-2">
           <div className="w-48 h-48 flex justify-center items-center border-r-4 border-b-4 border-l-black border-solid bg-[#E33332] hover:scale-[1.1] hover:cursor-pointer" onClick={()=>handleRedirect("skill")}>
@@ -31,7 +31,7 @@ const Pokeball = () => {
         <img src={entraineurPokemon} alt="entraineurPokemon" className="w-16 h-16" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
