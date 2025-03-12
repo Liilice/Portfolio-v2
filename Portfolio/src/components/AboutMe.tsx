@@ -1,26 +1,20 @@
-import { useEffect, useState } from "react";
-import Button from "./button";
+import { useState } from "react";
+import Button from "./reusable/button";
 import NavBar from "./navBar";
-import aboutMe from "@datas/aboutMe.json";
-import diplome from "@datas/diplome.json";
-import experience from "@datas/experience.json";
-import skill from "@datas/skill.json";
-import withContent from "../HOCs/withContent";
 import Content from "./Content";
 import Profil from "@assets/givrali.png";
+import { TextChoiceProps } from "@interfaces/AboutProps";
 
 const AboutMe = () => {
-  const [content, setContent] = useState(aboutMe);
-
-  const EnhancedContent = withContent(Content);
+  const [content, setContent] = useState<string>("A propos de moi");
 
   const displayText = (text: string) => {
-    const textChoice: any = {
-      person: aboutMe,
-      diplome: diplome,
-      competences: skill,
-      experience: experience,
-      contact: "jiayou",
+    const textChoice: TextChoiceProps = {
+      person: "A propos de moi",
+      diplome: "Formation",
+      competences: "Compétence",
+      experience: "Éxpériences",
+      contact: "Contactez-moi",
     };
 
     setContent(textChoice[text]);
@@ -31,8 +25,10 @@ const AboutMe = () => {
       <div className="flex justify-center items-center w-[50%] border border-b-black border-solid p-8 rounded-3xl bg-white/50">
         <div className=" flex flex-col items-center">
           <NavBar displayText={displayText} />
-          <EnhancedContent data={content} />
-          <Button text={"Télécharger CV"} displayText={displayText} />
+          <Content data={content} />
+          {content !== "Contactez-moi" && (
+            <Button text={"Télécharger CV"} displayText={displayText} />
+          )}
         </div>
       </div>
       <img src={Profil} alt="Profil" />

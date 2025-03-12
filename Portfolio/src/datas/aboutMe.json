@@ -1,5 +1,4 @@
 {
-  "title": "A propos de moi",
   "description": [
     "Bonjour !",
     "Développeuse Web, passionnée par la création et l'évolution de sites Web.",
@@ -18,10 +17,5 @@
     "Esprit d’équipe",
     "La flexibilité et l’adaptation"
   ],
-  "coordonnées": {
-    "phone": "+33 6 52 42 21 42",
-    "Email": "alice.zheng@epitech.eu",
-    "Postal": "93120 La Courneuve"
-  },
   "langues": ["Mandarin", "Anglais"]
 }

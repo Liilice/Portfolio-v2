@@ -4,7 +4,7 @@ import "@fonts/PokemonSolid.ttf"
 import AboutMe from "@components/AboutMe";
 import Pokeball from "@components/Pokeball";
 import StackChoose from "@components/StackChoose";
-import Project from "@components/Project"
+import Project from "@components/project/Project"
 import { useState } from "react";
 
 function App() {

@@ -1,13 +1,32 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: "PokemonHollow";   
-    src: local("PokemonHollow"),
-      url("@fonts/PokemonHollow.ttf") format("truetype");
-  }
+  font-family: "PokemonHollow";
+  src: local("PokemonHollow"),
+    url("@fonts/PokemonHollow.ttf") format("truetype");
+}
 
-  @font-face {
-    font-family: "PokemonSolid";   
-    src: local("PokemonSolid"),
-      url("@fonts/PokemonSolid.ttf") format("truetype");
-  }
+@font-face {
+  font-family: "PokemonSolid";
+  src: local("PokemonSolid"), url("@fonts/PokemonSolid.ttf") format("truetype");
+}
+
+.timelineContent {
+  position: relative;
+  padding-left: 27px;
+}
+
+.timelineContent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10.5px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+}
+
+.fontSolid {
+  font-family: "PokemonSolid";
+}

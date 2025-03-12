@@ -1,8 +1,7 @@
 {
-  "title": "Formation",
   "formation": [
     {
-      "année": "Novembre 2025",
+      "annee": "Novembre 2025",
       "ecole": "Web@academie by EPITECH - Paris",
       "diplome": "Développeur-Intégrateur Web (Titre 5 RNCP - BAC +2)",
       "description": [
@@ -14,7 +13,7 @@
       ]
     },
     {
-      "année": "2018",
+      "annee": "2018",
       "ecole": "Lycée Jacques Brel - 93",
       "diplome": "Baccalauréat Géneral Scientifique - Spécialité Informatique et sciences du numérique"
     }

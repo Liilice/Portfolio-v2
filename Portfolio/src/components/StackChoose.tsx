@@ -8,7 +8,7 @@ import NestSVG from "@assets/stack/nestjs.svg";
 import SymphonySVG from "@assets/stack/symfony.svg";
 import Fleche from "@assets/fleche-pokemon.svg";
 import { PokeballProps, StackChooseProps } from "@interfaces/PokeballItem";
-import Button from "./button";
+import Button from "./reusable/button";
 
 const PokeballItem: FC<PokeballProps> = ({
   item,
@@ -24,6 +24,7 @@ const PokeballItem: FC<PokeballProps> = ({
 
   const confirmChoose = () => {
     onChoose(stack);
+    setOpenModal(false);
   };
 
   return (
@@ -102,31 +103,36 @@ const PokeballItem: FC<PokeballProps> = ({
 };
 
 const StackChoose: FC<StackChooseProps> = ({ onChoose }) => {
-  const [show, setShow] = useState<Number|null>(null);
+  const [show, setShow] = useState<Number | null>(null);
   const [hoverIndex, setHoverIndex] = useState<Number | null>(null);
   const stack = [
-    { name: "react", image: ReactSVG },
-    { name: "reactNative", image: ReactNativeSVG },
-    { name: "angular", image: AngularSVG },
-    { name: "nest", image: NestSVG },
-    { name: "symfony", image: SymphonySVG },
+    { name: "React", image: ReactSVG },
+    { name: "React Native", image: ReactNativeSVG },
+    { name: "Angular", image: AngularSVG },
+    { name: "NestJS", image: NestSVG },
+    { name: "Symfony", image: SymphonySVG },
   ];
 
   return (
-    <div className="flex justify-center relative h-[25rem]">
-      {stack.map((item, index) => (
-        <PokeballItem
-          key={index}
-          item={item}
-          index={index}
-          isOpen={show === index}
-          showStack={() => setShow(index)}
-          hoverIndex={hoverIndex}
-          setHoverIndex={() => setHoverIndex(index)}
-          onChoose={onChoose}
-        />
-      ))}
-    </div>
+    <>
+      <h2 className="text-center">
+        Choissisez une technologie et vous allez être rediriger sur les projects
+      </h2>
+      <div className="flex justify-center relative h-[25rem]">
+        {stack.map((item, index) => (
+          <PokeballItem
+            key={index}
+            item={item}
+            index={index}
+            isOpen={show === index}
+            showStack={() => setShow(index)}
+            hoverIndex={hoverIndex}
+            setHoverIndex={() => setHoverIndex(index)}
+            onChoose={onChoose}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 

@@ -1,33 +1,40 @@
 {
-  "title" : "Éxpériences",
-  "expériencesProfessionnelles": [
+  "exp": [
     {
-      "année": "2020 - 2024",
-      "poste": "Buraliste ",
-        "etablissement": "Le Week-end" ,
+      "years": "09/2024 - 11/2025",
+      "post": "Alternante développeuse full stack",
+      "workplace": "Fablife",
       "description": [
-        "Conseil, vente et relation clients",
-        "Administration du stock",
-        "Travail en équipe",
-        "Tenue de caisse"
+        {
+          "title": "Amélioration continue du produit BeMum (programme d'accompagnement nutritionnel) sur les stacks suivantes :",
+          "stacks": {
+            "backend": "NestJS",
+            "frontend": "Angular et Gatsby"
+          }
+        },
+        {
+          "title": "Maintien du produit BeDaddy (programme d'accompagnement nutritionnel) sur les stacks suivantes :",
+          "stacks": {
+            "backend": "NodeJS",
+            "frontend": "Angular et WordPress"
+          }
+        },
+        {
+          "title": "Amélioration du SEO",
+          "tasks": [
+            "Optimisation du référencement naturel pour améliorer la visibilité des produits sur les moteurs de recherche",
+            "Mise en place de bonnes pratiques techniques et éditoriales"
+          ]
+        },
+        {
+          "title": "Optimisation des performances",
+          "tasks": [
+            "Amélioration du temps de chargement des pages et des interactions",
+            "Réduction du poids des assets et optimisation du code"
+          ]
+        }
       ],
-      "competenceAcquises": [
-        "collaboration",
-        "patience",
-        "entraide",
-        "travail en équipe",
-        "organisation"
-      ]
-    },
-    {
-      "année": "septembre 2024 - Novembre 2025",
-      "poste": "Alternante développeuse full stack",
-      "etablissement": "Fablife" ,
-      "description": [
-        "Amélioration continue du produit BeMum (programme d'accompagnement nutritionnel) sur les stacks suivantes : - NestJS pour la partie back. - Angular et ReactJS pour la partie front",
-        "Maintien du produit BeDaddy (programme d'accompagnement nutritionnel) sur les stacks suivantes : - NodeJS pour la partie back - Angular et Wordpress pour la partie front"
-      ],
-      "competenceAcquises": [
+      "acquiredSkills": [
         "collaboration",
         "patience",
         "entraide",
