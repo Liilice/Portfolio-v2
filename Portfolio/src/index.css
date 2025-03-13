@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: "ArialRoundedMTBold";
-  src: local("ArialRoundedMTBold"), url("ArialRoundedMTBold.ttf") format("truetype");
+  src: local("ArialRoundedMTBold"), url("@fonts/ArialRoundedMTBold.ttf") format("truetype");
 }
 
 

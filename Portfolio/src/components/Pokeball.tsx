@@ -4,7 +4,6 @@ import entraineurPokemon from "@assets/entraineur-pokemon.svg";
 
 const Pokeball = () => {
   const handleRedirect = (page: string) => {
-    console.log("page ", page);
   };
 
   return (

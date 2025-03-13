@@ -30,8 +30,6 @@ const Content = ({ data }: { data: string }) => {
         return <Competences />;
       case "Éxpériences":
         return <Experiences />;
-      case "Contactez-moi":
-        return <Contact />;
       case "Accueil":
         return <CarteDresseur />;
       default:

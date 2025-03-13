@@ -8,7 +8,7 @@ import arrowPokemonGauche from "@assets/arrow-pokemon-gauche.svg";
 
 const NavBar = ({ displayText }: any) => {
   return (
-    <div className="flex justify-between items-center mt-10">
+    <div className="flex justify-between items-center mt-5">
       <img
         src={arrowPokemonGauche}
         alt="icone flèche pokemon"
@@ -37,12 +37,6 @@ const NavBar = ({ displayText }: any) => {
         alt="icone d'éxpériences"
         className="px-6 hover:cursor-pointer "
         onClick={() => displayText("experience")}
-      />
-      <img
-        src={contact}
-        alt="icone de contact"
-        className="px-6 hover:cursor-pointer "
-        onClick={() => displayText("contact")}
       />
       <img
         src={arrowPokemonDroite}

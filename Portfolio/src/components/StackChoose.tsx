@@ -20,11 +20,9 @@ const PokeballItem: FC<PokeballProps> = ({
   onChoose,
 }) => {
   const [stack, setStack] = useState<string | null>(null);
-  const [openModal, setOpenModal] = useState<boolean>(false);
 
   const confirmChoose = () => {
     onChoose(stack);
-    setOpenModal(false);
   };
 
   return (
@@ -58,9 +56,11 @@ const PokeballItem: FC<PokeballProps> = ({
             showStack(index);
           }}
           onMouseLeave={() => setHoverIndex(null)}
-          onClick={() => {
+          onClick={() => { 
             setStack(item.name);
-            setOpenModal(true);
+            if(isOpen) {
+              onChoose(stack);
+            }
           }}
         />
         {isOpen && (
@@ -72,32 +72,11 @@ const PokeballItem: FC<PokeballProps> = ({
             } top-25 z-[1000] w-[20%] absolute left-23  hover:cursor-pointer`}
             onClick={() => {
               setStack(item.name);
-              setOpenModal(true);
+              onChoose(item.name);
             }}
           />
         )}
       </div>
-      {openModal && (
-        <div className="absolute bottom-0 right-0 border border-black border-solid max-w-xl  p-3 rounded-xl bg-white/50 z-[1000]">
-          <p className="mb-4">
-            Vous allez être redirigé vers les projets de la stack choisie. Prêt
-            à explorer ces nouveaux projets ?
-          </p>
-          <div className="flex justify-around items-center">
-            <div onClick={() => confirmChoose()}>
-              <Button text={"Oui"} />
-            </div>
-            <div
-              onClick={() => {
-                setStack(null);
-                setOpenModal(false);
-              }}
-            >
-              <Button text={"Non"} />
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 };
@@ -116,9 +95,9 @@ const StackChoose: FC<StackChooseProps> = ({ onChoose }) => {
   return (
     <>
       <h2 className="text-center">
-        Choissisez une technologie et vous allez être rediriger sur les projects
+        Choisissez une technologie pour découvrir les projets associés.
       </h2>
-      <div className="flex justify-center relative h-[25rem]">
+      <div className="flex justify-center relative h-[20rem]">
         {stack.map((item, index) => (
           <PokeballItem
             key={index}

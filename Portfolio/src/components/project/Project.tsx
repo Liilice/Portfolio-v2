@@ -20,15 +20,16 @@ const Project = ({ data }: { data: string }) => {
   useEffect(() => {
     if (data) {
       const filterStack = filterProject(data);
-      setProjectToSee(filterStack[0]);
       setProjectsList(filterStack);
+      setProjectToSee(filterStack[0]);
     } else {
       setProjectsList(ProjectList);
+      setProjectToSee(ProjectList[0]);
     }
   }, [data]);
 
   return (
-    <div className="flex justify-center mx-[10rem] pb-10 h-[35rem]">
+    <div className="flex justify-center mx-[10rem] pb-10 h-[35rem] w-[90%]">
       <div className="border border-black border-solid flex p-8 rounded-3xl bg-white/50">
         <div className="flex-1">
           <img src={picture} alt="picture" className="max-w-[75%]" />
@@ -41,10 +42,17 @@ const Project = ({ data }: { data: string }) => {
             <li
               key={`project_${index}`}
               className={`relative mb-6 px-16 py-2 rounded-2xl shadow-xl hover:cursor-pointer ${
-                index === projectToSee.key ? "bg-[#FCD583]" : "bg-white"
+                item.key === projectToSee.key ? "bg-[#FCD583]" : "bg-white"
               }`}
+              onClick={()=>setProjectToSee(item)}
             >
-              {index === projectToSee.key && <img src={FlechePokeball} alt="active project" className="absolute top-0 left-0 max-w-[10%] z-[1000]"/>}
+              {item.key === projectToSee.key && (
+                <img
+                  src={FlechePokeball}
+                  alt="active project"
+                  className="absolute top-0 left-0 max-w-[10%] z-[1000]"
+                />
+              )}
               {item.name}
             </li>
           ))}
