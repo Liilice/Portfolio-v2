@@ -11,6 +11,11 @@
   src: local("PokemonSolid"), url("@fonts/PokemonSolid.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "ArialRoundedMTBold";
+  src: local("ArialRoundedMTBold"), url("ArialRoundedMTBold.ttf") format("truetype");
+}
+
 .timelineContent {
   position: relative;
   padding-left: 27px;
@@ -29,4 +34,8 @@
 
 .fontSolid {
   font-family: "PokemonSolid";
+}
+
+.fontArial {
+  font-family: "ArialRoundedMTBold";
 }

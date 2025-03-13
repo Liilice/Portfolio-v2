@@ -4,6 +4,8 @@ import Diplomes from "@components/about/Diplomes";
 import Experiences from "@components/about/Experiences";
 import Contact from "@components/about/Contact";
 import aboutMe from "@datas/aboutMe.json";
+import Button from "./reusable/button";
+import CarteDresseur from "@components/about/CarteDresseur";
 
 const Content = ({ data }: { data: string }) => {
   const [title, setTitle] = useState<string | null>(null);
@@ -30,9 +32,11 @@ const Content = ({ data }: { data: string }) => {
         return <Experiences />;
       case "Contactez-moi":
         return <Contact />;
+      case "Accueil":
+        return <CarteDresseur />;
       default:
         return (
-          <ul>
+          <ul className="mb-6">
             {aboutMe.description &&
               aboutMe.description.map((item: string, index: number) => (
                 <li key={index}>{item}</li>
@@ -43,9 +47,14 @@ const Content = ({ data }: { data: string }) => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h2>{title}</h2>
+    <div
+      className={`flex flex-col justify-center items-center ${
+        title !== "Accueil" ? "bg-white/75 shadow-2xl" : ""
+      } px-[5%] py-[1%] mt-[3%] rounded-2xl `}
+    >
+      {title !== "Accueil" && <h2>{title}</h2>}
       <Contents />
+      {title !== "Contactez-moi" && <Button text={"Télécharger CV"} />}
     </div>
   );
 };

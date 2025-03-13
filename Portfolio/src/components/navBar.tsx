@@ -6,47 +6,44 @@ import entraineurPokemon from "@assets/entraineur-pokemon.svg";
 import arrowPokemonDroite from "@assets/arrow-pokemon-droite.svg";
 import arrowPokemonGauche from "@assets/arrow-pokemon-gauche.svg";
 
-const NavBar = ({displayText}:any) => {
+const NavBar = ({ displayText }: any) => {
   return (
-    <div className="flex justify-center ">
+    <div className="flex justify-between items-center mt-10">
       <img
         src={arrowPokemonGauche}
         alt="icone flèche pokemon"
         className="px-6 hover:cursor-pointer"
       />
-      <div className="flex justify-center items-center border border-solid border-black rounded-t-3xl p-1">
-        <img
-          src={entraineurPokemon}
-          alt="icone entraineur de pokemon"
-          className="px-6 hover:cursor-pointer "
-          onClick={()=>displayText("person")}
-        />
-        <img
-          src={diplome}
-          alt="icone de diplome"
-          className="px-6 hover:cursor-pointer "
-          onClick={()=>displayText("diplome")}
-        />
-        <img
-          src={skill}
-          alt="icone de compétences"
-          className="px-6 hover:cursor-pointer "
-          onClick={()=>displayText("competences")}
-
-        />
-        <img
-          src={experience}
-          alt="icone d'éxpériences"
-          className="px-6 hover:cursor-pointer "
-          onClick={()=>displayText("experience")}
-        />
-        <img
-          src={contact}
-          alt="icone de contact"
-          className="px-6 hover:cursor-pointer "
-          onClick={()=>displayText("contact")}
-        />
-      </div>
+      <img
+        src={entraineurPokemon}
+        alt="icone entraineur de pokemon"
+        className="px-6 hover:cursor-pointer "
+        onClick={() => displayText("person")}
+      />
+      <img
+        src={diplome}
+        alt="icone de diplome"
+        className="px-6 hover:cursor-pointer "
+        onClick={() => displayText("diplome")}
+      />
+      <img
+        src={skill}
+        alt="icone de compétences"
+        className="px-6 hover:cursor-pointer "
+        onClick={() => displayText("competences")}
+      />
+      <img
+        src={experience}
+        alt="icone d'éxpériences"
+        className="px-6 hover:cursor-pointer "
+        onClick={() => displayText("experience")}
+      />
+      <img
+        src={contact}
+        alt="icone de contact"
+        className="px-6 hover:cursor-pointer "
+        onClick={() => displayText("contact")}
+      />
       <img
         src={arrowPokemonDroite}
         alt="flèche pokemon"

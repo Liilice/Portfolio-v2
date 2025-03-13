@@ -9,6 +9,12 @@
   src: local("PokemonSolid"), url("@fonts/PokemonSolid.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "ArialRoundedMTBold";
+  src: local("ArialRoundedMTBold"), url("ArialRoundedMTBold.ttf") format("truetype");
+}
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

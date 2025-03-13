@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <div className="bg-[url(./assets/background.svg)]">
+    <div className="bg-[url(./assets/background.svg)] p-[5%] flex  flex-col justify-center items-center">
       <Pokeball />
       <AboutMe />
       <StackChoose onChoose={chooseStack}/>

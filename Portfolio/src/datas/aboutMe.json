@@ -17,5 +17,31 @@
     "Esprit d’équipe",
     "La flexibilité et l’adaptation"
   ],
-  "langues": ["Mandarin", "Anglais"]
+  "langues": ["Mandarin", "Anglais"],
+  "accueil": [
+    {
+      "title": "Nom : ",
+      "description": ["Zheng Alice"]
+    },
+    {
+      "title": "Projects : ",
+      "description": ["8"]
+    },
+    {
+      "title": "Etat : ",
+      "description": ["Recherche Alternance Développeuse Full Stack"]
+    },
+    {
+      "title": "Début de l’aventure : ",
+      "description": ["20/11/2023"]
+    },
+    {
+      "title": "Langues : ",
+      "description": ["Mandarin", "Anglais"]
+    },
+    {
+      "title": "Loisirs : ",
+      "description": ["Pokemon", "Badminton"]
+    }
+  ]
 }
