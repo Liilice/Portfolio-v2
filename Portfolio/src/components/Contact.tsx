@@ -12,6 +12,7 @@ const Contact = () => {
   const [email, setEmail] = useState<string | undefined>();
   const [message, setMessage] = useState<string | undefined>();
   const [emailValided, setEmailValided] = useState<boolean | null>(null);
+  const [contactInfo, setContactInfo] = useState<string | null>(contact.phone);
 
   const submit = (e: any) => {
     e.preventDefault();
@@ -22,34 +23,75 @@ const Contact = () => {
     }
   };
 
+  const handleInfo = (text: string) => {
+    switch (text) {
+      case "phone":
+        setContactInfo(contact.phone);
+        break;
+      case "mail":
+        setContactInfo(contact.mail);
+        break;
+      case "location":
+        setContactInfo(contact.location);
+        break;
+      default:
+        setContactInfo(null);
+        break;
+    }
+  };
+
   return (
-    <div className="flex justify-between items-center w-[90%]" id="contact">
-      <div className="mr-7 text-white text-[16px]">
+    <div
+      className="flex flex-col sm:flex-row sm:justify-between items-center"
+      id="contact"
+    >
+      <div className="sm:mr-7 text-white text-[16px] flex sm:flex-col cursor-pointer">
         <div className="flex items-center py-5">
-          <img src={phone} alt="phone" className="mr-3" />
-          <p>{contact.phone}</p>
+          <img
+            src={phone}
+            alt="phone"
+            className="mr-3"
+            onClick={() => handleInfo("phone")}
+          />
+          <p className="hidden sm:block">{contact.phone}</p>
         </div>
         <div className="flex items-center  py-5">
-          <img src={mail} alt="mail" className="mr-3" />
-          <p>{contact.mail}</p>
+          <img
+            src={mail}
+            alt="mail"
+            className="mr-3"
+            onClick={() => handleInfo("mail")}
+          />
+          <p className="hidden sm:block">{contact.mail}</p>
         </div>
         <div className="flex items-center  py-5">
-          <img src={location} alt="location" className="max-w-[25%] mr-3" />
-          <p>{contact.location}</p>
+          <img
+            src={location}
+            alt="location"
+            className="mr-3"
+            onClick={() => handleInfo("location")}
+          />
+          <p className="hidden sm:block">{contact.location}</p>
         </div>
-        <div className="flex justify-center items-center  py-5">
-          <a href="https://github.com/Liilice" target="_blank">
-            <img src={github} alt="github" className="max-w-[75%] m-3" />
+        <div className="flex justify-center items-center sm:py-5 ">
+          <a
+            href="https://github.com/Liilice"
+            target="_blank"
+            className="max-w-[30%] m-3"
+          >
+            <img src={github} alt="github" />
           </a>
           <a
             href="https://www.linkedin.com/in/alicezhenglilice/"
             target="_blank"
+            className="max-w-[30%] m-3"
           >
-            <img src={linkedin} alt="linkedin" className="max-w-[75%] m-3" />
+            <img src={linkedin} alt="linkedin" />
           </a>
         </div>
       </div>
-      <form onSubmit={submit} className="flex flex-col  w-[25em] pl-2 flex-1">
+      {contactInfo && <p className="contactInfo sm:hidden">{contactInfo}</p>}
+      <form onSubmit={submit} className="flex flex-col sm:pl-2 flex-1 w-full">
         <label
           className="fontSolid tracking-[.3em] text-white "
           htmlFor="email"
@@ -57,7 +99,7 @@ const Contact = () => {
           Email
         </label>
         <input
-          className={`w-[100%] rounded-xl px-4 py-3 mb-4  bg-white/75 shadow-2xl ${
+          className={`rounded-xl px-4 py-3 mb-4  bg-white/75 shadow-2xl ${
             emailValided === false
               ? "border-4 border-dashed border-red-800"
               : ""

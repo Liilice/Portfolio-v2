@@ -23,7 +23,7 @@ function App() {
       <AboutMe />
       {/* <StackChoose onChoose={chooseStack} /> */}
       {/* <Project data={stack} />*/}
-      {/* <Contact />  */}
+      <Contact /> 
     </div>
   );
 }
