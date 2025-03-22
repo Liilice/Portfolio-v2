@@ -93,8 +93,8 @@ const StackChoose: FC<StackChooseProps> = ({ onChoose }) => {
   ];
 
   return (
-    <>
-      <h2 className="text-center">
+    <div id="stack">
+      <h2 className="text-center text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-widest">
         Choisissez une technologie pour découvrir les projets associés.
       </h2>
       <div className="flex justify-center relative h-[20rem]">
@@ -111,7 +111,7 @@ const StackChoose: FC<StackChooseProps> = ({ onChoose }) => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

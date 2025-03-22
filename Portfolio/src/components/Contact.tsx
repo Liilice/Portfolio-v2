@@ -23,8 +23,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-between items-center w-[90%]">
-      <div className="mr-7 text-white text-[16px] fontArial">
+    <div className="flex justify-between items-center w-[90%]" id="contact">
+      <div className="mr-7 text-white text-[16px]">
         <div className="flex items-center py-5">
           <img src={phone} alt="phone" className="mr-3" />
           <p>{contact.phone}</p>

@@ -29,11 +29,11 @@ const Project = ({ data }: { data: string }) => {
   }, [data]);
 
   return (
-    <div className="flex justify-center mx-[10rem] pb-10 h-[35rem] w-[90%]">
+    <div className="flex justify-center mx-[10rem] pb-10 h-[35rem] w-[90%]" id="project">
       <div className="border border-black border-solid flex p-8 rounded-3xl bg-white/50">
-        <div className="flex-1">
+        <div className="flex-1 flex flex-col">
           <img src={picture} alt="picture" className="max-w-[75%]" />
-          <p className="bg-[#FCD583] px-5 py-4 rounded-2xl shadow-xl">
+          <p className="bg-[#FCD583] px-5 py-4 rounded-2xl shadow-xl flex-1">
             {projectToSee.description}
           </p>
         </div>

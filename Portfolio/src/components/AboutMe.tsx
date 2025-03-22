@@ -20,29 +20,37 @@ const AboutMe = () => {
   };
 
   return (
-    <div className="flex flex-col py-4 px-8 rounded-3xl bg-[url(./assets/aboutbg.svg)] mb-[5%] w-[90%]">
+    <div
+      className="bg-[url(./assets/aboutbg.svg)] flex flex-col py-4 px-5 rounded-3xl mb-[5%]"
+      id="about"
+    >
+      <img src={Profil} alt="Profil" className="max-w-[50%] sm:hidden" />
       <div className="flex justify-center items-center ">
-        <div className="flex flex-col ">
+        <div className="flex flex-col flex-1">
           <div className="flex justify-between items-center">
             <img
               src={pokeballWhite}
               alt="pokeball sans border"
               className="max-w-[7%]"
             />
-            <p className="font-bold text-white text-4xl fontArial">
+            <h3 className="font-bold text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
               CARTE DE DRESSEUR
-            </p>
+            </h3>
             <img
               src={pokeballWhite}
               alt="pokeball sans border"
               className="max-w-[7%]"
             />
           </div>
+          <NavBar displayText={displayText} />
           <Content data={content} />
         </div>
-        <img src={Profil} alt="Profil" />
+        <img
+          src={Profil}
+          alt="Profil"
+          className="hidden sm:block max-w-[40%]"
+        />
       </div>
-      <NavBar displayText={displayText} />
     </div>
   );
 };

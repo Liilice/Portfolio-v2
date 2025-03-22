@@ -34,7 +34,7 @@ const Content = ({ data }: { data: string }) => {
         return <CarteDresseur />;
       default:
         return (
-          <ul className="mb-6">
+          <ul className="p-[6%]">
             {aboutMe.description &&
               aboutMe.description.map((item: string, index: number) => (
                 <li key={index}>{item}</li>
@@ -48,9 +48,9 @@ const Content = ({ data }: { data: string }) => {
     <div
       className={`flex flex-col justify-center items-center ${
         title !== "Accueil" ? "bg-white/75 shadow-2xl" : ""
-      } px-[5%] py-[1%] mt-[3%] rounded-2xl `}
+      } py-[1%] px-[5%] mt-[3%] rounded-2xl `}
     >
-      {title !== "Accueil" && <h2>{title}</h2>}
+      {title !== "Accueil" && <h2 className="smallTitle">{title}</h2>}
       <Contents />
       {title !== "Contactez-moi" && <Button text={"Télécharger CV"} />}
     </div>

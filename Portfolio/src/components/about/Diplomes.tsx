@@ -2,13 +2,12 @@ import diplome from "@datas/diplome.json";
 import { FormationProps } from "@interfaces/AboutProps";
 
 const Diplomes = () => {
- 
   return (
     <div className="border-l-2 border-solid border-white">
       <ul>
         {diplome.formation.map((item: FormationProps, index: number) => (
           <li className="timelineContent mb-6" key={`formation_${index}`}>
-            <h3 className="font-bold text-2xl mb-2">
+            <h3 className="font-bold mb-2">
               {item.annee} : {item.ecole}
             </h3>
             <p>{item.diplome}</p>

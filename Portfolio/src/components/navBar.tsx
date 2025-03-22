@@ -1,5 +1,4 @@
 import experience from "@assets/experience.svg";
-import contact from "@assets/contact.svg";
 import skill from "@assets/skill.svg";
 import diplome from "@assets/diplome.svg";
 import entraineurPokemon from "@assets/entraineur-pokemon.svg";
@@ -12,36 +11,36 @@ const NavBar = ({ displayText }: any) => {
       <img
         src={arrowPokemonGauche}
         alt="icone flèche pokemon"
-        className="px-6 hover:cursor-pointer"
+        className="px-1.5 hover:cursor-pointer max-w-[15%]"
       />
       <img
         src={entraineurPokemon}
         alt="icone entraineur de pokemon"
-        className="px-6 hover:cursor-pointer "
+        className="px-1.5 hover:cursor-pointer max-w-[15%]"
         onClick={() => displayText("person")}
       />
       <img
         src={diplome}
         alt="icone de diplome"
-        className="px-6 hover:cursor-pointer "
+        className="px-1.5 hover:cursor-pointer max-w-[15%]"
         onClick={() => displayText("diplome")}
       />
       <img
         src={skill}
         alt="icone de compétences"
-        className="px-6 hover:cursor-pointer "
+        className="px-1.5 hover:cursor-pointer max-w-[15%]"
         onClick={() => displayText("competences")}
       />
       <img
         src={experience}
         alt="icone d'éxpériences"
-        className="px-6 hover:cursor-pointer "
+        className="px-1.5 hover:cursor-pointer max-w-[15%]"
         onClick={() => displayText("experience")}
       />
       <img
         src={arrowPokemonDroite}
         alt="flèche pokemon"
-        className="px-6 hover:cursor-pointer "
+        className="px-1.5 hover:cursor-pointer max-w-[15%]"
       />
     </div>
   );

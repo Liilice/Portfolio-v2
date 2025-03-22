@@ -11,12 +11,13 @@
 
 @font-face {
   font-family: "ArialRoundedMTBold";
-  src: local("ArialRoundedMTBold"), url("@fonts/ArialRoundedMTBold.ttf") format("truetype");
+  src: local("ArialRoundedMTBold"),
+    url("@fonts/ArialRoundedMTBold.ttf") format("truetype");
 }
 
-
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: ArialRoundedMTBold, Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -27,11 +28,79 @@
 
 h2 {
   font-family: "PokemonSolid";
-  font-size: 45px;
-  letter-spacing: 10px;
-  color: #ffcc01;
-  text-shadow: -4px -4px 0 #3462ad, 4px -4px 0 #3462ad, -4px 4px 0 #3462ad,
-    4px 4px 0 #3462ad;
-  padding: 15px;
+  text-align: center;
 }
 
+.smallTitle {
+  padding: 15px 15px 0px 15px;
+  font-size: 24px;
+  letter-spacing: 6px;
+  color: #ffcc01;
+  text-shadow: -2px -2px 0 #3462ad, 2px -2px 0 #3462ad, -2px 2px 0 #3462ad,
+    2px 2px 0 #3462ad;
+}
+
+@media (min-width: 64rem) {
+  .smallTitle {
+    font-size: 35px;
+    letter-spacing: 10px;
+    text-shadow: -3.5px -3.5px 0 #3462ad, 3.5px -3.5px 0 #3462ad,
+      -3.5px 3.5px 0 #3462ad, 3.5px 3px 0 #3462ad;
+  }
+}
+
+li {
+  font-family: Arial;
+  font-size: 0.75rem;
+}
+p,
+a {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 40rem) {
+  li,
+  p,
+  a {
+    font-size: 1rem;
+  }
+}
+
+h3,
+h4 {
+  font-size: 1rem;
+}
+@media (min-width: 40rem) {
+  h3,
+  h4 {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  h3,
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  h3,
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  h3,
+  h4 {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 96rem) {
+  h3,
+  h4 {
+    font-size: 2.25rem;
+  }
+}
