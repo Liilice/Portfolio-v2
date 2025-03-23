@@ -29,22 +29,27 @@ const Project = ({ data }: { data: string }) => {
   }, [data]);
 
   return (
-    <div className="flex justify-center mx-[10rem] pb-10 h-[35rem] w-[90%]" id="project">
-      <div className="border border-black border-solid flex p-8 rounded-3xl bg-white/50">
-        <div className="flex-1 flex flex-col">
-          <img src={picture} alt="picture" className="max-w-[75%]" />
-          <p className="bg-[#FCD583] px-5 py-4 rounded-2xl shadow-xl flex-1">
+    <div className="flex justify-center pb-[2%] lg:h-[35rem]" id="project">
+      <div className="flex flex-col lg:flex-row border border-black border-solid p-8 rounded-3xl bg-white/50">
+        <div className="flex-1 flex flex-col h-full order-2 lg:order-1">
+          <img
+            src={picture}
+            alt="picture"
+            className="flex-1 basis-1/2"
+          />
+          <p className="bg-[#FCD583] px-5 py-4 rounded-2xl shadow-xl flex-1 basis-1/2 overflow-auto">
             {projectToSee.description}
           </p>
         </div>
-        <ul className="flex-1 ml-10 overflow-auto">
+
+        <ul className="flex-1 order-1 overflow-auto lg:order-2 lg:ml-10">
           {projectsList.map((item: ProjectDescription, index: number) => (
             <li
               key={`project_${index}`}
-              className={`relative mb-6 px-16 py-2 rounded-2xl shadow-xl hover:cursor-pointer ${
+              className={`relative mb-3 px-10 lg:mb-6 lg:px-16 py-2 rounded-2xl shadow-xl hover:cursor-pointer ${
                 item.key === projectToSee.key ? "bg-[#FCD583]" : "bg-white"
               }`}
-              onClick={()=>setProjectToSee(item)}
+              onClick={() => setProjectToSee(item)}
             >
               {item.key === projectToSee.key && (
                 <img

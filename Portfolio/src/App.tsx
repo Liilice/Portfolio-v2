@@ -22,7 +22,7 @@ function App() {
       <Pokeball />
       <AboutMe />
       {/* <StackChoose onChoose={chooseStack} /> */}
-      {/* <Project data={stack} />*/}
+      <Project data={stack} />
       <Contact /> 
     </div>
   );
