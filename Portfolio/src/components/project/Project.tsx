@@ -25,6 +25,7 @@ const Project = ({ data }: { data: string }) => {
       const filterStack = filterProject(data);
       setProjectsList(filterStack);
       setProjectToSee(filterStack[0]);
+      setFirstProjectMobile(filterStack[0])
     } else {
       setProjectsList(ProjectList);
       setProjectToSee(ProjectList[0]);
