@@ -6,6 +6,7 @@ import location from "@assets/location.svg";
 import github from "@assets/github.svg";
 import linkedin from "@assets/linkedin.svg";
 import Button from "./reusable/button";
+import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
   const [object, setObject] = useState<string | undefined>();
@@ -13,13 +14,40 @@ const Contact = () => {
   const [message, setMessage] = useState<string | undefined>();
   const [emailValided, setEmailValided] = useState<boolean | null>(null);
   const [contactInfo, setContactInfo] = useState<string | null>(contact.phone);
+  const [error, setError] = useState<boolean>(false);
 
-  const submit = (e: any) => {
+  const submit = async (e: any) => {
     e.preventDefault();
+    if (!email || !object || !message) {
+      setError(true);
+      return;
+    }
+
     if (email?.includes("@") && email?.includes(".")) {
       setEmailValided(true);
     } else {
       setEmailValided(false);
+      return;
+    }
+
+    const formData = { email: email, subject: object, html: message };
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}contact`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response) {
+        toast.success("Message envoyé avec succès");
+      }
+    } catch (error) {
+      toast.error(
+        "Oups ! Une erreur s'est produite. Veuillez réessayer plus tard."
+      );
     }
   };
 
@@ -45,6 +73,7 @@ const Contact = () => {
       <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl tracking-widest mt-4">
         Contact
       </h2>
+      <ToastContainer />
       <div
         className="flex flex-col sm:flex-row sm:justify-between items-center"
         id="contact"
@@ -100,7 +129,7 @@ const Contact = () => {
             className="fontSolid tracking-[.3em] text-white "
             htmlFor="email"
           >
-            Email
+            Email*
           </label>
           <input
             className={`rounded-xl px-4 py-3 mb-4  bg-white/75 shadow-2xl ${
@@ -118,7 +147,7 @@ const Contact = () => {
             htmlFor="object"
             className="fontSolid tracking-[.3em] text-white"
           >
-            Objet
+            Objet*
           </label>
           <input
             type="text"
@@ -132,7 +161,7 @@ const Contact = () => {
             htmlFor="message"
             className="fontSolid tracking-[.3em] text-white"
           >
-            Message
+            Message*
           </label>
           <textarea
             name="message"
@@ -145,6 +174,11 @@ const Contact = () => {
 
           <Button text={"Envoyer"} />
         </form>
+        {error && (
+          <p className="text-[#8DFF93] !text-base">
+            Veuillez remplir tout les champs
+          </p>
+        )}
       </div>
     </>
   );
