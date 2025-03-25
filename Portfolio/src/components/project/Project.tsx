@@ -49,6 +49,7 @@ const Project = ({ data }: { data: string }) => {
             <li
               className="relative pl-12 pr-5 py-2 shadow-xl hover:cursor-pointer bg-[#FCD583] flex justify-between items-center fontArial"
               key={`project_0`}
+              onClick={() => setOpenProjectMenu(!openProjectMenu)}
             >
               <img
                 src={FlechePokeball}
