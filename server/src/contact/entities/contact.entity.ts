@@ -9,8 +9,8 @@ export class Contact {
     email: string;
 
     @Column()
-    object: string;
+    subject: string;
 
     @Column()
-    message: string;
+    html: string;
 }

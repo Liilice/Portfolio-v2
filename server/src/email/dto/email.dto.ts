@@ -1,16 +1,32 @@
+import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsString, IsOptional, IsEmail } from 'class-validator';
 
 export class sendEmailDto {
+  @ApiProperty({
+    description: 'email',
+    example: 'portfolio@gmail.com',
+  })
   @IsEmail({}, { each: true })
-  email: string;
+  @IsNotEmpty()
+  readonly email: string;
 
+  @ApiProperty({
+    description: 'subject email',
+    example: 'Information about your job search',
+  })
   @IsString()
-  subject: string;
+  @IsNotEmpty()
+  readonly subject: string;
 
+  @ApiProperty({
+    description: 'Message',
+    example: 'blablablablabla',
+  })
+  @IsNotEmpty()
   @IsString()
-  html: string;
+  readonly html: string;
 
   @IsOptional()
   @IsString()
-  text?: string;
+  readonly text?: string;
 }
