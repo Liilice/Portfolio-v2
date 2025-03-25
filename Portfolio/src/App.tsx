@@ -21,9 +21,9 @@ function App() {
     <div className="bg-[url(./assets/background.svg)] p-[3%] flex  flex-col justify-center border-4 border-dashed  sm:border-green-500 md:border-purple-800 lg:border-pink-300 xl:border-yellow-300 2xl:border-white">
       <Pokeball />
       <AboutMe />
-      {/* <StackChoose onChoose={chooseStack} /> */}
-      {/* <Project data={stack} />*/}
-      {/* <Contact />  */}
+      <StackChoose onChoose={chooseStack} />
+      <Project data={stack} />
+      <Contact /> 
     </div>
   );
 }

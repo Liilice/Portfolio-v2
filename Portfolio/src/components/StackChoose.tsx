@@ -8,7 +8,6 @@ import NestSVG from "@assets/stack/nestjs.svg";
 import SymphonySVG from "@assets/stack/symfony.svg";
 import Fleche from "@assets/fleche-pokemon.svg";
 import { PokeballProps, StackChooseProps } from "@interfaces/PokeballItem";
-import Button from "./reusable/button";
 
 const PokeballItem: FC<PokeballProps> = ({
   item,
