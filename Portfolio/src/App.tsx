@@ -8,6 +8,7 @@ import StackChoose from "@components/StackChoose";
 import Project from "@components/project/Project";
 import { useState } from "react";
 import Contact from "@components/Contact";
+import { Link, Element } from "react-scroll";
 
 function App() {
   // console.log(import.meta.env.VITE_APP_API_KEY);
@@ -20,10 +21,18 @@ function App() {
   return (
     <div className="bg-[url(./assets/background.svg)] p-[3%] flex  flex-col justify-center border-4 border-dashed  sm:border-green-500 md:border-purple-800 lg:border-pink-300 xl:border-yellow-300 2xl:border-white">
       <Pokeball />
-      <AboutMe />
-      <StackChoose onChoose={chooseStack} />
-      <Project data={stack} />
-      <Contact /> 
+      <Element name="about">
+        <AboutMe />
+      </Element>
+      <Element name="stack">
+        <StackChoose onChoose={chooseStack} />
+      </Element>
+      <Element name="project">
+        <Project data={stack} />
+      </Element>
+      <Element name="contact">
+        <Contact />
+      </Element>
     </div>
   );
 }

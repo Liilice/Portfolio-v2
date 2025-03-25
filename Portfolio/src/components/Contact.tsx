@@ -70,7 +70,7 @@ const Contact = () => {
 
   return (
     <>
-      <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl tracking-widest mt-4">
+      <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl tracking-widest mt-4" id="contact">
         Contact
       </h2>
       <ToastContainer />
