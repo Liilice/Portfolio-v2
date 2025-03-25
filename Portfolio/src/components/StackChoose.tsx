@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import PokeballOuvert from "@assets/pokeball-ouvert.svg";
 import PokeballFermer from "@assets/pokeball-fermer.svg";
 import ReactSVG from "@assets/stack/react.svg";
@@ -19,10 +19,6 @@ const PokeballItem: FC<PokeballProps> = ({
   onChoose,
 }) => {
   const [stack, setStack] = useState<string | null>(null);
-
-  const confirmChoose = () => {
-    onChoose(stack);
-  };
 
   return (
     <>
@@ -49,7 +45,7 @@ const PokeballItem: FC<PokeballProps> = ({
           alt={`Pokeball ${isOpen ? "ouvert" : "fermé"}`}
           className={`relative ${index % 2 === 0 ? "top-28" : ""} 
           ${isOpen ? "max-w-[50%]" : "max-w-[30%]"} 
-          m-10 z-[1000] hover:scale-110 hover:cursor-pointer`}
+          m-10 z-[900] hover:scale-110 hover:cursor-pointer`}
           onMouseEnter={() => {
             setHoverIndex(index);
             showStack(index);
@@ -68,7 +64,7 @@ const PokeballItem: FC<PokeballProps> = ({
             alt="item"
             className={`${
               index % 2 === 0 && "top-49 "
-            } top-25 z-[1000] w-[20%] absolute left-23  hover:cursor-pointer`}
+            } top-25 z-[900] w-[20%] absolute left-23  hover:cursor-pointer`}
             onClick={() => {
               setStack(item.name);
               onChoose(item.name);
