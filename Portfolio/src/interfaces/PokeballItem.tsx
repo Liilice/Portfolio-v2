@@ -2,9 +2,10 @@ export interface PokeballProps {
   item: { name: string; image: string };
   index: number;
   isOpen: boolean;
-  showStack: () => void;
+  showStack: (index:number) => void;
   hoverIndex: number | null;
-  setHoverIndex: () => void;
+  setHoverIndex: (index:number) => void;
+  onChoose: (name: string) => void;
 }
 
 export interface StackChooseProps {

@@ -1,4 +1,4 @@
-import aboutMe from "./datas/aboutMe.json";
+import aboutMe from "../../datas/aboutMe.json";
 
 const CarteDresseur = () => {
   return (

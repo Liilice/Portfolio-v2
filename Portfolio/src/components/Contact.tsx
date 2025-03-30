@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import contact from "./datas/contact.json";
+import { useState } from "react";
+import contact from "../datas/contact.json";
 import phone from "./assets/phone.svg";
 import mail from "./assets/mail.svg";
 import location from "./assets/location.svg";

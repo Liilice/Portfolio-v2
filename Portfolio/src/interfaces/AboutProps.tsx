@@ -3,14 +3,13 @@ export interface TextChoiceProps {
   diplome: string;
   competences: string;
   experience: string;
-  contact: string;
 }
 
 export interface FormationProps {
   annee: string;
   ecole: string;
   diplome: string;
-  description: Array<string>;
+  description?: Array<string>;
 }
 
 export interface StackProps {
@@ -25,7 +24,8 @@ export interface ExpStacks {
 
 export interface ExpDescriptionProps {
   title: string;
-  stacks: ExpStacks;
+  stacks?: ExpStacks;
+  tasks?: string[];
 }
 
 export interface ExpProps {

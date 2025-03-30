@@ -8,7 +8,7 @@ import StackChoose from "./components/StackChoose";
 import Project from "./components/project/Project";
 import { useState } from "react";
 import Contact from "./components/Contact";
-import {Element } from "react-scroll";
+// import {Element } from "react-scroll";
 
 function App() {
   // console.log(import.meta.env.VITE_APP_API_KEY);
@@ -21,18 +21,18 @@ function App() {
   return (
     <div className="bg-[url(./assets/background.svg)] p-[3%] flex  flex-col justify-center">
       <Pokeball />
-      <Element name="about">
+      {/* <Element name="about"> */}
         <AboutMe />
-      </Element>
-      <Element name="stack">
+      {/* </Element> */}
+      {/* <Element name="stack"> */}
         <StackChoose onChoose={chooseStack} />
-      </Element>
-      <Element name="project">
+      {/* </Element> */}
+      {/* <Element name="project"> */}
         <Project data={stack} />
-      </Element>
-      <Element name="contact">
+      {/* </Element> */}
+      {/* <Element name="contact"> */}
         <Contact />
-      </Element>
+      {/* </Element> */}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import ButtonProps from "./interfaces/ButtonProps";
+import ButtonProps from "../../interfaces/ButtonProps";
 
 const Button = (data: ButtonProps) => {
   return (

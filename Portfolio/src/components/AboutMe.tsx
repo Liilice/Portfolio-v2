@@ -2,7 +2,7 @@ import { useState } from "react";
 import NavBar from "./navBar";
 import Content from "./Content";
 import Profil from "./assets/givrali.png";
-import { TextChoiceProps } from "./interfaces/AboutProps";
+import { TextChoiceProps } from "../interfaces/AboutProps";
 import pokeballWhite from "./assets/pokeballWhite.svg";
 
 const AboutMe = () => {
@@ -16,7 +16,7 @@ const AboutMe = () => {
       experience: "Éxpériences",
     };
 
-    setContent(textChoice[text]);
+    setContent(textChoice[text as keyof TextChoiceProps]);
   };
 
   return (
@@ -34,7 +34,7 @@ const AboutMe = () => {
               className="max-w-[7%]"
             />
             <h3 className="font-bold text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
-              CARTE DE DRESSEUR
+              CARTE DE DRESSEUSE
             </h3>
             <img
               src={pokeballWhite}

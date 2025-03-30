@@ -1,5 +1,5 @@
-import diplome from "./datas/diplome.json";
-import { FormationProps } from "./interfaces/AboutProps";
+import diplome from "../../datas/diplome.json";
+import { FormationProps } from "../../interfaces/AboutProps";
 
 const Diplomes = () => {
   return (
