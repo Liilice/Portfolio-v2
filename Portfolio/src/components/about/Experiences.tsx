@@ -1,5 +1,5 @@
-import experience from "@datas/experience.json";
-import { ExpProps, ExpDescriptionProps } from "@interfaces/AboutProps";
+import experience from "./datas/experience.json";
+import { ExpProps, ExpDescriptionProps } from "./interfaces/AboutProps";
 
 const Experiences = () => {
   return (

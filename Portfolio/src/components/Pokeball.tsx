@@ -1,7 +1,7 @@
-import contact from "@assets/contact.svg";
-import skill from "@assets/skill.svg";
-import entraineurPokemon from "@assets/entraineur-pokemon.svg";
-import Profil from "@assets/givrali.png";
+import contact from "./assets/contact.svg";
+import skill from "./assets/skill.svg";
+import entraineurPokemon from "./assets/entraineur-pokemon.svg";
+import Profil from "./assets/givrali.png";
 import { Link } from "react-scroll";
 
 const Pokeball = () => {

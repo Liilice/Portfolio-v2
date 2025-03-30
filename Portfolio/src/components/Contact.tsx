@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import contact from "@datas/contact.json";
-import phone from "@assets/phone.svg";
-import mail from "@assets/mail.svg";
-import location from "@assets/location.svg";
-import github from "@assets/github.svg";
-import linkedin from "@assets/linkedin.svg";
+import contact from "./datas/contact.json";
+import phone from "./assets/phone.svg";
+import mail from "./assets/mail.svg";
+import location from "./assets/location.svg";
+import github from "./assets/github.svg";
+import linkedin from "./assets/linkedin.svg";
 import Button from "./reusable/button";
 import { ToastContainer, toast } from "react-toastify";
 

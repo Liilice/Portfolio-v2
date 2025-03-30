@@ -14,14 +14,14 @@ Avant de commencer, assurez-vous d'avoir installé :
 Clonez le projet :
 
 ```bash
-git clone https://github.com/EpitechWebAcademiePromo2025/W-PRO-260-PAR-3-1-portfoliotitre-alice.zheng.git
+git clone https://github.com/Liilice/Portfolio-v2.git
 ```
 
 ### Installation du Frontend (React + Vite)
 À partir de la racine du projet : 
 
 ```bash
-cd Portfolio
+cd Portfolio-v2
 npm install
 ```
 

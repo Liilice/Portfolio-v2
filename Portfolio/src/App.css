@@ -3,12 +3,12 @@
 @font-face {
   font-family: "PokemonHollow";
   src: local("PokemonHollow"),
-    url("@fonts/PokemonHollow.ttf") format("truetype");
+    url("./fonts/PokemonHollow.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "PokemonSolid";
-  src: local("PokemonSolid"), url("@fonts/PokemonSolid.ttf") format("truetype");
+  src: local("PokemonSolid"), url("./fonts/PokemonSolid.ttf") format("truetype");
 }
 
 @font-face {

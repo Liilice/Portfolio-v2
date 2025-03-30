@@ -1,6 +1,6 @@
-import skill from "@datas/skill.json";
-import { StackProps } from "@interfaces/AboutProps";
-import GithubQr from "@assets/GithubQr.png";
+import skill from "./datas/skill.json";
+import { StackProps } from "./interfaces/AboutProps";
+import GithubQr from "./assets/GithubQr.png";
 
 const Competences = () => {
   return (

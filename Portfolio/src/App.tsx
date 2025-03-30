@@ -1,14 +1,14 @@
 import "./App.css";
-import "@fonts/PokemonHollow.ttf";
-import "@fonts/PokemonSolid.ttf";
-import "@fonts/ArialRoundedMTBold.ttf";
-import AboutMe from "@components/AboutMe";
-import Pokeball from "@components/Pokeball";
-import StackChoose from "@components/StackChoose";
-import Project from "@components/project/Project";
+import "./fonts/PokemonHollow.ttf";
+import "./fonts/PokemonSolid.ttf";
+import "./fonts/ArialRoundedMTBold.ttf";
+import AboutMe from "./components/AboutMe";
+import Pokeball from "./components/Pokeball";
+import StackChoose from "./components/StackChoose";
+import Project from "./components/project/Project";
 import { useState } from "react";
-import Contact from "@components/Contact";
-import { Link, Element } from "react-scroll";
+import Contact from "./components/Contact";
+import {Element } from "react-scroll";
 
 function App() {
   // console.log(import.meta.env.VITE_APP_API_KEY);
@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <div className="bg-[url(./assets/background.svg)] p-[3%] flex  flex-col justify-center border-4 border-dashed  sm:border-green-500 md:border-purple-800 lg:border-pink-300 xl:border-yellow-300 2xl:border-white">
+    <div className="bg-[url(./assets/background.svg)] p-[3%] flex  flex-col justify-center">
       <Pokeball />
       <Element name="about">
         <AboutMe />

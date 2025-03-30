@@ -1,9 +1,9 @@
-import experience from "@assets/experience.svg";
-import skill from "@assets/skill.svg";
-import diplome from "@assets/diplome.svg";
-import entraineurPokemon from "@assets/entraineur-pokemon.svg";
-import arrowPokemonDroite from "@assets/arrow-pokemon-droite.svg";
-import arrowPokemonGauche from "@assets/arrow-pokemon-gauche.svg";
+import experience from "./assets/experience.svg";
+import skill from "./assets/skill.svg";
+import diplome from "./assets/diplome.svg";
+import entraineurPokemon from "./assets/entraineur-pokemon.svg";
+import arrowPokemonDroite from "./assets/arrow-pokemon-droite.svg";
+import arrowPokemonGauche from "./assets/arrow-pokemon-gauche.svg";
 
 const NavBar = ({ displayText }: any) => {
   return (

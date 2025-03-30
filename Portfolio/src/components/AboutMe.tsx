@@ -1,9 +1,9 @@
 import { useState } from "react";
 import NavBar from "./navBar";
 import Content from "./Content";
-import Profil from "@assets/givrali.png";
-import { TextChoiceProps } from "@interfaces/AboutProps";
-import pokeballWhite from "@assets/pokeballWhite.svg";
+import Profil from "./assets/givrali.png";
+import { TextChoiceProps } from "./interfaces/AboutProps";
+import pokeballWhite from "./assets/pokeballWhite.svg";
 
 const AboutMe = () => {
   const [content, setContent] = useState<string>("Accueil");

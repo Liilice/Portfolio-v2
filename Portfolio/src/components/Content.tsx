@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import Competences from "@components/about/Competences";
-import Diplomes from "@components/about/Diplomes";
-import Experiences from "@components/about/Experiences";
-import Contact from "@components/about/Contact";
-import aboutMe from "@datas/aboutMe.json";
+import Competences from "./components/about/Competences";
+import Diplomes from "./components/about/Diplomes";
+import Experiences from "./components/about/Experiences";
+import Contact from "./components/about/Contact";
+import aboutMe from "./datas/aboutMe.json";
 import Button from "./reusable/button";
-import CarteDresseur from "@components/about/CarteDresseur";
+import CarteDresseur from "./components/about/CarteDresseur";
 
 const Content = ({ data }: { data: string }) => {
   const [title, setTitle] = useState<string | null>(null);

@@ -1,13 +1,13 @@
 import { FC, useState } from "react";
-import PokeballOuvert from "@assets/pokeball-ouvert.svg";
-import PokeballFermer from "@assets/pokeball-fermer.svg";
-import ReactSVG from "@assets/stack/react.svg";
-import ReactNativeSVG from "@assets/stack/react-native-1.svg";
-import AngularSVG from "@assets/stack/angular.svg";
-import NestSVG from "@assets/stack/nestjs.svg";
-import SymphonySVG from "@assets/stack/symfony.svg";
-import Fleche from "@assets/fleche-pokemon.svg";
-import { PokeballProps, StackChooseProps } from "@interfaces/PokeballItem";
+import PokeballOuvert from "./assets/pokeball-ouvert.svg";
+import PokeballFermer from "./assets/pokeball-fermer.svg";
+import ReactSVG from "./assets/stack/react.svg";
+import ReactNativeSVG from "./assets/stack/react-native-1.svg";
+import AngularSVG from "./assets/stack/angular.svg";
+import NestSVG from "./assets/stack/nestjs.svg";
+import SymphonySVG from "./assets/stack/symfony.svg";
+import Fleche from "./assets/fleche-pokemon.svg";
+import { PokeballProps, StackChooseProps } from "./interfaces/PokeballItem";
 
 const PokeballItem: FC<PokeballProps> = ({
   item,

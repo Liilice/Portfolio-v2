@@ -1,8 +1,8 @@
-import picture from "@assets/allpokemon.png";
+import picture from "./assets/allpokemon.png";
 import { useEffect, useState } from "react";
-import ProjectList from "@datas/ProjectList";
-import { ProjectDescription } from "@interfaces/AboutProps";
-import FlechePokeball from "@assets/pokeball-fleche.svg";
+import ProjectList from "./datas/ProjectList";
+import { ProjectDescription } from "./interfaces/AboutProps";
+import FlechePokeball from "./assets/pokeball-fleche.svg";
 
 const Project = ({ data }: { data: string }) => {
   const [projectsList, setProjectsList] = useState<ProjectDescription[]>([]);
