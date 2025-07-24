@@ -1,10 +1,11 @@
-import picture from "./assets/allpokemon.png";
+import picture from "../../assets/projects/smartMeal.png";
 import { useEffect, useState } from "react";
 import ProjectList from "../../datas/ProjectList";
 import { ProjectDescription } from "../../interfaces/AboutProps";
 import FlechePokeball from "./assets/pokeball-fleche.svg";
+import { ChevronRight } from "lucide-react";
 
-const Project = ({ data }: { data: string |null  }) => {
+const Project = ({ data }: { data: string | null }) => {
   const [projectsList, setProjectsList] = useState<ProjectDescription[]>([]);
   const [projectToSee, setProjectToSee] = useState<ProjectDescription>(
     ProjectList[0]
@@ -25,7 +26,7 @@ const Project = ({ data }: { data: string |null  }) => {
       const filterStack = filterProject(data);
       setProjectsList(filterStack);
       setProjectToSee(filterStack[0]);
-      setFirstProjectMobile(filterStack[0])
+      setFirstProjectMobile(filterStack[0]);
     } else {
       setProjectsList(ProjectList);
       setProjectToSee(ProjectList[0]);
@@ -34,17 +35,43 @@ const Project = ({ data }: { data: string |null  }) => {
 
   return (
     <div className="flex justify-center pb-[2%] lg:h-[35rem]" id="project">
-      <div className="flex flex-col lg:flex-row border border-black border-solid p-8 rounded-3xl bg-white/50">
+      <div className="flex flex-col lg:flex-row border border-black border-solid p-4 lg:p-8 rounded-3xl bg-white/50">
         <div className="flex-1 flex flex-col h-full order-2 lg:order-1">
-          <img src={picture} alt="picture" className="flex-1 basis-1/2" />
+          <div className="flex">
+            <img
+              src={projectToSee?.screen ? projectToSee?.screen : picture}
+              alt="picture"
+              className="flex-1 basis-1/2 max-w-[50%] mb-3.5"
+            />
+            {projectToSee.language.length > 0 && (
+              <div className="ml-4 lg:ml-8 flex flex-col relative">
+                <h3>Technologies utilisées : </h3>
+                <ul className="ml-10">
+                  {projectToSee.language.map((techno, index) => (
+                    <li key={`${techno}_${index}`} className="list-disc">
+                      {techno}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={projectToSee.lienGithub}
+                  className="absolute bottom-[15px] flex justify-center items-center italic"
+                  target="_blank"
+                >
+                  <ChevronRight />
+                  Voir le projet
+                </a>
+              </div>
+            )}
+          </div>
           <p className="bg-[#FCD583] px-5 py-4 rounded-2xl shadow-xl flex-1 basis-1/2 overflow-auto">
             {projectToSee.description}
           </p>
         </div>
 
         {/* Version Mobile */}
-        <ul className="flex-1 order-1 lg:hidden relative">
-          <li className="fontArial mb-2">Sélectionner un projet</li>
+        <ul className="flex-1 order-1 lg:hidden relative mb-4">
+          <li className="fontArial mb-2"><span>Sélectionner un projet</span></li>
           {firstProjectMobile && (
             <li
               className="relative pl-12 pr-5 py-2 shadow-xl hover:cursor-pointer bg-[#FCD583] flex justify-between items-center fontArial"
@@ -98,7 +125,7 @@ const Project = ({ data }: { data: string |null  }) => {
         </ul>
 
         {/* Version Desktop */}
-        <ul className="hidden lg:block lg:order-2 lg:ml-10 lg:flex-1 lg:overflow-auto">
+        <ul className="hidden lg:block lg:order-2 lg:ml-10 lg:w-[25%] lg:overflow-auto">
           <li className="fontArial mb-2">Sélectionner un projet</li>
           {projectsList.map((item: ProjectDescription, index: number) => (
             <li

@@ -1,4 +1,5 @@
 export interface TextChoiceProps {
+  accueil: string;
   person: string;
   diplome: string;
   competences: string;
@@ -41,6 +42,6 @@ export interface ProjectDescription {
   name: string;
   description: string;
   language: string[];
-  screen: string[];
+  screen: string;
   lienGithub: string;
 }

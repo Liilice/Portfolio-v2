@@ -13,13 +13,6 @@
           }
         },
         {
-          "title": "Maintien du produit BeDaddy (programme d'accompagnement nutritionnel) sur les stacks suivantes :",
-          "stacks": {
-            "backend": "NodeJS",
-            "frontend": "Angular et WordPress"
-          }
-        },
-        {
           "title": "Amélioration du SEO",
           "tasks": [
             "Optimisation du référencement naturel pour améliorer la visibilité des produits sur les moteurs de recherche",

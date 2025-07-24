@@ -1,12 +1,12 @@
 import { FC, useState } from "react";
-import PokeballOuvert from "./assets/pokeballOuvert.png";
-import PokeballFermer from "./assets/pokeballFermer.png";
-import ReactSVG from "./assets/stack/react.svg";
-import ReactNativeSVG from "./assets/stack/react-native-1.svg";
-import AngularSVG from "./assets/stack/angular.svg";
-import NestSVG from "./assets/stack/nestjs.svg";
-import SymphonySVG from "./assets/stack/symfony.svg";
-// import Fleche from "./assets/fleche-pokemon.svg";
+import PokeballOuvert from "../assets/pokeballOuvert.png";
+import PokeballFermer from "../assets/pokeballFermer.png";
+import ReactSVG from "../assets/stack/react.svg";
+import ReactNativeSVG from "../assets/stack/react-native-1.svg";
+import AngularSVG from "../assets/stack/angular.svg";
+import NestSVG from "../assets/stack/nestjs.svg";
+import SymphonySVG from "../assets/stack/django.svg";
+// import Fleche from "../assets/fleche-pokemon.svg";
 import { PokeballProps, StackChooseProps } from "../interfaces/PokeballItem";
 
 const PokeballItem: FC<PokeballProps> = ({
@@ -89,7 +89,7 @@ const StackChoose: FC<StackChooseProps> = ({ onChoose }) => {
     { name: "React Native", image: ReactNativeSVG },
     { name: "Angular", image: AngularSVG },
     { name: "NestJS", image: NestSVG },
-    { name: "Symfony", image: SymphonySVG },
+    { name: "Django", image: SymphonySVG },
   ];
 
   return (

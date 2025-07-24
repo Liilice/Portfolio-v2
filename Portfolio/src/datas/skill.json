@@ -6,7 +6,7 @@
     },
     {
       "title": "Back-end",
-      "techno": ["ExpressJS", "Symfony", "NestJS", "GraphQL"]
+      "techno": ["ExpressJS", "Symfony", "NestJS", "Spring boot"]
     },
     {
       "title": "Base de données",
@@ -14,7 +14,7 @@
     },
     {
       "title": "Application mobile",
-      "techno": ["React Native", "Kotlin", "SwiftUI"]
+      "techno": ["React Native", "Flutter"]
     }
   ]
 }
