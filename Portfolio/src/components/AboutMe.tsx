@@ -1,8 +1,7 @@
 import { useState } from "react";
 import NavBar from "./navBar";
 import Content from "./Content";
-// import Profil from "./assets/givrali.png";
-import Profil from "../assets/cv/alice.png";
+import Profil from "../assets/cv/alice.webp";
 import { TextChoiceProps } from "../interfaces/AboutProps";
 import pokeballWhite from "./assets/pokeballWhite.svg";
 

@@ -6,7 +6,6 @@ import { useState } from "react";
 import Contact from "./components/Contact";
 import Feedback from "./components/Feedback";
 import Login from "./components/Login";
-import { Element } from "react-scroll";
 
 function LandingPage() {
   // console.log(import.meta.env.VITE_APP_API_KEY);
@@ -20,18 +19,10 @@ function LandingPage() {
     <div className="bg-[url(./assets/background.svg)] p-[3%] flex  flex-col justify-center">
       <Login />
       <Pokeball />
-      <Element name="about">
-        <AboutMe />
-      </Element>
-      <Element name="stack">
-        <StackChoose onChoose={chooseStack} />
-      </Element>
-      <Element name="project">
-        <Project data={stack} />
-      </Element>
-      <Element name="contact">
-        <Contact />
-      </Element>
+      <AboutMe />
+      <StackChoose onChoose={chooseStack} />
+      <Project data={stack} />
+      <Contact />
       <Feedback />
     </div>
   );

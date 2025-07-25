@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
-import PokeballOuvert from "../assets/pokeballOuvert.png";
-import PokeballFermer from "../assets/pokeballFermer.png";
+import PokeballOuvert from "../assets/pokeballOuvert.webp";
+import PokeballFermer from "../assets/pokeballFermer.webp";
 import ReactSVG from "../assets/stack/react.svg";
 import ReactNativeSVG from "../assets/stack/react-native-1.svg";
 import AngularSVG from "../assets/stack/angular.svg";

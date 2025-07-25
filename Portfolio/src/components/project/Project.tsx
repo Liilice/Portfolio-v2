@@ -1,4 +1,4 @@
-import picture from "../../assets/projects/smartMeal.png";
+import picture from "../../assets/projects/smartMeal.webp";
 import { useEffect, useState } from "react";
 import ProjectList from "../../datas/ProjectList";
 import { ProjectDescription } from "../../interfaces/AboutProps";
@@ -37,16 +37,16 @@ const Project = ({ data }: { data: string | null }) => {
     <div className="flex justify-center pb-[2%] lg:h-[35rem]" id="project">
       <div className="flex flex-col lg:flex-row border border-black border-solid p-4 lg:p-8 rounded-3xl bg-white/50">
         <div className="flex-1 flex flex-col h-full order-2 lg:order-1">
-          <div className="flex">
+          <div className="flex flex-col sm:flex-row mb-2">
             <img
               src={projectToSee?.screen ? projectToSee?.screen : picture}
               alt="picture"
-              className="flex-1 basis-1/2 max-w-[50%] mb-3.5"
+              className="flex-1 basis-1/2 sm:max-w-[50%] mb-3.5 rounded-md"
             />
             {projectToSee.language.length > 0 && (
-              <div className="ml-4 lg:ml-8 flex flex-col relative">
+              <div className="ml-4 lg:ml-8 flex flex-col relative flex-1">
                 <h3>Technologies utilisées : </h3>
-                <ul className="ml-10">
+                <ul className="ml-10 grid grid-cols-2 sm:block">
                   {projectToSee.language.map((techno, index) => (
                     <li key={`${techno}_${index}`} className="list-disc">
                       {techno}
@@ -55,7 +55,7 @@ const Project = ({ data }: { data: string | null }) => {
                 </ul>
                 <a
                   href={projectToSee.lienGithub}
-                  className="absolute bottom-[15px] flex justify-center items-center italic"
+                  className="absolute right-0 sm:bottom-0 flex justify-center items-center italic"
                   target="_blank"
                 >
                   <ChevronRight />
@@ -71,7 +71,9 @@ const Project = ({ data }: { data: string | null }) => {
 
         {/* Version Mobile */}
         <ul className="flex-1 order-1 lg:hidden relative mb-4">
-          <li className="fontArial mb-2"><span>Sélectionner un projet</span></li>
+          <li className="fontArial mb-2">
+            <span>Sélectionner un projet</span>
+          </li>
           {firstProjectMobile && (
             <li
               className="relative pl-12 pr-5 py-2 shadow-xl hover:cursor-pointer bg-[#FCD583] flex justify-between items-center fontArial"

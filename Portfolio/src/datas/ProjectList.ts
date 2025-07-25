@@ -1,8 +1,8 @@
-import smartMeal from "../assets/projects/smartMeal.png";
-import omniscience from "../assets/projects/omniscience.png";
-import myEvents from "../assets/projects/myEvents.png";
-import intranet from "../assets/projects/intranet.png";
-import irc from "../assets/projects/irc.png";
+import smartMeal from "../assets/projects/smartMeal.webp";
+import omniscience from "../assets/projects/omniscience.webp";
+import myEvents from "../assets/projects/myEvents.webp";
+import intranet from "../assets/projects/intranet.webp";
+import irc from "../assets/projects/irc.webp";
 
 const ProjectList = [
   {
