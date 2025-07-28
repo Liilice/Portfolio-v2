@@ -1,92 +1,99 @@
+import smartMeal from "../assets/projects/smartMeal.webp";
+import omniscience from "../assets/projects/omniscience.webp";
+import myEvents from "../assets/projects/myEvents.webp";
+import intranet from "../assets/projects/intranet.webp";
+import irc from "../assets/projects/irc.webp";
+
 const ProjectList = [
   {
     key: 0,
     name: "HealthFlow",
-    description:
-      "HealthFlow est une application mobile de gestion de la santé qui aide les utilisateurs à maintenir un mode de vie sain de manière fluide et harmonieuse. Elle permet de : - Calculer le nombre de calories en fonction du poids des ingrédients. - Ajouter ces calories dans différents blocs : petit-déjeuner, déjeuner, dîner et collation. - Effectuer un calcul total des calories consommées dans la journée. - Comparer ce total avec le métabolisme de base pour déterminer si on excède le nombre de calories conseillés.",
+    description: `
+        HealthFlow est une application mobile de gestion de la santé qui aide les utilisateurs à maintenir un mode de vie sain de manière fluide et harmonieuse. Elle permet de : 
+          - Calculer le nombre de calories en fonction du poids des ingrédients. 
+          - Ajouter ces calories dans différents blocs : petit-déjeuner, déjeuner, dîner et collation. 
+          - Effectuer un calcul total des calories consommées dans la journée. 
+          - Comparer ce total avec le métabolisme de base pour déterminer si on excède le nombre de calories conseillés.
+      `,
     language: ["React Native", "Supabase"],
-    screen: [],
+    screen: "",
     lienGithub: "https://github.com/Liilice/HealthFlow",
   },
   {
     key: 1,
-    name: "Twitter",
+    name: "Smart Meal",
     description:
-      "Ce projet consiste à développer un réseau social pour les étudiants de la promotion, offrant des fonctionnalités similaires à Twitter. Il permettra aux utilisateurs de publier des messages courts, de suivre d'autres utilisateurs, d'interagir avec des publications et de rester connectés avec leur communauté étudiante. L'objectif est de créer une plateforme intuitive et sécurisée qui facilite la communication et l'échange d'idées entre les étudiants.",
-    language: ["PHP", "HTML & CSS", "JS", "Ajax", "Tailwind"],
-    screen: [],
+      "SmartMeal est une application mobile qui vous propose des idées de repas, génère automatiquement la liste des ingrédients nécessaires, vous permet de l’envoyer à vos contacts par SMS, et vous aide à trouver un supermarché à proximité pour faire vos courses.",
+    language: ["React Native"],
+    screen: smartMeal,
     lienGithub: "https://github.com/Liilice/Tweet-Academie",
   },
   {
     key: 2,
-    name: "Puissance 4",
-    description:
-      " Ce projet a pour objectif de créer un plugin JavaScript reproduisant le célèbre jeu de Puissance 4. Le plugin sera conçu de manière modulaire, permettant de configurer plusieurs options, telles que le nombre de colonnes et de lignes de la grille de jeu ainsi que les couleurs des jetons pour chaque joueur, en veillant à ce qu'ils soient distincts. Cela offrira une flexibilité maximale aux utilisateurs pour personnaliser l'expérience de jeu selon leurs préférences.",
-    language: ["Javascript (ES6)", "HTML", "CSS", "Algorithmie"],
-    screen: [],
-    lienGithub: "https://github.com/Liilice/Puissance-4",
+    name: "Micro-services",
+    description: `
+      Ce projet a pour objectif :
+      - Découvrir les microservices
+      - Comprendre les différences entre SQL et NoSQL
+      - Faire communiquer différentes API
+      Trois microservices sont mis en place :
+      - Service Auth & Chat (PHP / SQL) : gestion de l’inscription, connexion, sessions (token) et messages du chat stockés en base SQL.
+      - Service Discussions (Node.js / NoSQL) : gestion des discussions stockées en base NoSQL (MongoDB).
+      - API Gateway (PHP) : point d’entrée unique qui agrège les deux premiers services et gère les relations (liaison discussionId dans les messages SQL et userId dans les discussions NoSQL).
+      `,
+    language: [
+      "PHP",
+      "SLIM",
+      "MYSQL",
+      "JWT (JSON Web Token)",
+      "EXPRESSJS",
+      "MongoDB",
+      "React",
+    ],
+    screen: "",
+    lienGithub: "https://github.com/Liilice/Tweet-Academie",
   },
   {
     key: 3,
-    name: "MyQuizz",
-    description:
-      "Ce projet consiste à créer un site web interactif qui permet aux utilisateurs de tester et d'améliorer leur culture générale à travers des quiz variés. L'objectif principal est de développer une plateforme engageante et personnalisée, tout en respectant des contraintes techniques spécifiques. Le site sera développé en utilisant principalement le framework Symfony (version 3 ou supérieure) et interagira avec une base de données MySQL.",
-    language: ["Symfony"],
-    screen: [],
+    name: "Omniscience",
+    description: `
+      Omniscience vise à offrir à tout utilisateur — du débutant à l’expert — un accès simple et personnalisé à la connaissance. Disponible sur mobile et tablette, l’application propose :
+      - Un générateur de cours et exercices ludiques, alimenté par une IA Python.
+      - Une centralisation des métadonnées pour une recherche rapide et intelligente.
+      Le projet ambitionne de devenir la référence pour toute personne désireuse d’apprendre, en offrant une plateforme unique plutôt qu’une simple recherche sur Internet.
+      `,
+    language: ["Python", "Neo4j", "React Native", "NestJS", "AI", "GraphQL"],
+    screen: omniscience,
     lienGithub: "https://github.com/Liilice/Tweet-Academie",
   },
   {
     key: 4,
-    name: "Micro-services",
+    name: "My events",
     description:
       "Ce projet consiste à créer un site web interactif qui permet aux utilisateurs de tester et d'améliorer leur culture générale à travers des quiz variés. L'objectif principal est de développer une plateforme engageante et personnalisée, tout en respectant des contraintes techniques spécifiques. Le site sera développé en utilisant principalement le framework Symfony (version 3 ou supérieure) et interagira avec une base de données MySQL.",
-    language: ["React", "Slim (PHP)"],
-    screen: [],
+    language: ["Angular", "NestJS"],
+    screen: myEvents,
     lienGithub: "https://github.com/Liilice/Tweet-Academie",
   },
   {
     key: 5,
-    name: "Previously-on",
-    description:
-      "Ce projet consiste à créer un site web interactif qui permet aux utilisateurs de tester et d'améliorer leur culture générale à travers des quiz variés. L'objectif principal est de développer une plateforme engageante et personnalisée, tout en respectant des contraintes techniques spécifiques. Le site sera développé en utilisant principalement le framework Symfony (version 3 ou supérieure) et interagira avec une base de données MySQL.",
-    language: ["Angular"],
-    screen: [],
+    name: "My IRC",
+    description: `
+      L’objectif de ce projet est de créer un serveur IRC (Internet Relay Chat) à l’aide de Node.js, permettant à plusieurs utilisateurs de se connecter simultanément, de communiquer via des « channels » et d’utiliser un système de commandes pour gérer leur expérience.
+      Le serveur doit être capable de gérer plusieurs connexions, proposer la notion de salons de discussion (« channels ») et offrir une interface réactive en React pour une utilisation sans terminal.
+    `,
+    language: ["React", "SOKET.IO", "EXPRESSJS"],
+    screen: irc,
     lienGithub: "https://github.com/Liilice/Tweet-Academie",
   },
   {
     key: 6,
-    name: "My-events",
-    description:
-      "Ce projet consiste à créer un site web interactif qui permet aux utilisateurs de tester et d'améliorer leur culture générale à travers des quiz variés. L'objectif principal est de développer une plateforme engageante et personnalisée, tout en respectant des contraintes techniques spécifiques. Le site sera développé en utilisant principalement le framework Symfony (version 3 ou supérieure) et interagira avec une base de données MySQL.",
-    language: ["Angular", "NestJS"],
-    screen: [],
-    lienGithub: "https://github.com/Liilice/Tweet-Academie",
-  },
-  {
-    key: 7,
-    name: "E-commerce",
-    description:
-      "Ce projet consiste à créer un site web interactif qui permet aux utilisateurs de tester et d'améliorer leur culture générale à travers des quiz variés. L'objectif principal est de développer une plateforme engageante et personnalisée, tout en respectant des contraintes techniques spécifiques. Le site sera développé en utilisant principalement le framework Symfony (version 3 ou supérieure) et interagira avec une base de données MySQL.",
-    language: ["Symfony", "React"],
-    screen: [],
-    lienGithub: "https://github.com/Liilice/Tweet-Academie",
-  },
-  {
-    key: 8,
-    name: "Super app",
-    description:
-      "Ce projet consiste à créer un site web interactif qui permet aux utilisateurs de tester et d'améliorer leur culture générale à travers des quiz variés. L'objectif principal est de développer une plateforme engageante et personnalisée, tout en respectant des contraintes techniques spécifiques. Le site sera développé en utilisant principalement le framework Symfony (version 3 ou supérieure) et interagira avec une base de données MySQL.",
-    language: ["Kotlin", "SwiftUI", "React Native", "NestJS"],
-    screen: [],
-    lienGithub: "https://github.com/Liilice/Tweet-Academie",
-  },
-  {
-    key: 9,
-    name: "Omniscience",
-    description:
-      "Ce projet consiste à créer un site web interactif qui permet aux utilisateurs de tester et d'améliorer leur culture générale à travers des quiz variés. L'objectif principal est de développer une plateforme engageante et personnalisée, tout en respectant des contraintes techniques spécifiques. Le site sera développé en utilisant principalement le framework Symfony (version 3 ou supérieure) et interagira avec une base de données MySQL.",
-    language: ["Python", "Neo4j", "React Native", "NestJS", "AI", "GraphQL"],
-    screen: [],
+    name: "Intranet - auto école",
+    description: `
+    Ce projet consiste à développer un intranet de gestion d’auto-école à l’aide du framework Django. L’application permettra aux secrétaires, instructeurs, étudiants et administrateurs de gérer les plannings, les comptes et le suivi de formation.
+    `,
+    language: ["Django"],
+    screen: intranet,
     lienGithub: "https://github.com/Liilice/Tweet-Academie",
   },
 ];

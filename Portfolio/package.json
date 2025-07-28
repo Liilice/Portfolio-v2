@@ -6,15 +6,18 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "deploy": "scp -r dist/* alice@51.75.129.192:~/portfolio",
+    "build:deploy" : "tsc -b && vite build && scp -r dist/* alice@51.75.129.192:~/portfolio",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.6",
+    "lucide-react": "^0.515.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.5",
-    "react-scroll": "^1.9.3",
+    "react-modal": "^3.16.3",
+    "react-router-dom": "^7.6.2",
     "react-toastify": "^11.0.5",
     "tailwindcss": "^4.0.6"
   },
@@ -23,7 +26,7 @@
     "@types/node": "^22.13.2",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "@types/react-scroll": "^1.8.10",
+    "@types/react-modal": "^3.16.3",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.19.0",
     "eslint-plugin-react-hooks": "^5.0.0",

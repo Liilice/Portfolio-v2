@@ -5,7 +5,6 @@ import mail from "./assets/mail.svg";
 import location from "./assets/location.svg";
 import github from "./assets/github.svg";
 import linkedin from "./assets/linkedin.svg";
-import Button from "./reusable/button";
 import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
@@ -30,9 +29,13 @@ const Contact = () => {
       return;
     }
 
+    setEmail("");
+    setMessage("");
+    setObject("");
+    toast.success("Message envoyé avec succès");
     const formData = { email: email, subject: object, html: message };
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}contact`, {
+      await fetch(`${import.meta.env.VITE_API_URL}contact`, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -40,10 +43,6 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       });
-
-      if (response) {
-        toast.success("Message envoyé avec succès");
-      }
     } catch (error) {
       toast.error(
         "Oups ! Une erreur s'est produite. Veuillez réessayer plus tard."
@@ -70,7 +69,10 @@ const Contact = () => {
 
   return (
     <>
-      <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl tracking-widest mt-4" id="contact">
+      <h2
+        className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl tracking-widest mt-4"
+        id="contact"
+      >
         Contact
       </h2>
       <ToastContainer />
@@ -171,8 +173,7 @@ const Contact = () => {
             onChange={(e) => setMessage(e.target.value)}
             required
           ></textarea>
-
-          <Button text={"Envoyer"} />
+          <button>Envoyer</button>
         </form>
         {error && (
           <p className="text-[#8DFF93] !text-base">

@@ -46,7 +46,7 @@ const Content = ({ data }: { data: string }) => {
   return (
     <div
       className={`flex flex-col justify-center items-center ${
-        title !== "Accueil" ? "bg-white/75 shadow-2xl" : ""
+        title !== "Accueil" ? "bg-white/40 shadow-2xl" : ""
       } py-[1%] px-[5%] mt-[3%] rounded-2xl `}
     >
       {title !== "Accueil" && <h2 className="smallTitle">{title}</h2>}
